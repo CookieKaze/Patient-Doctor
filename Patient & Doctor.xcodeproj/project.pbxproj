@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D4657E21DCBA1C30051B373 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4657E11DCBA1C30051B373 /* main.m */; };
+		1D4657EA1DCBA2290051B373 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4657E91DCBA2290051B373 /* Doctor.m */; };
+		1D4657ED1DCBA22F0051B373 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4657EC1DCBA22F0051B373 /* Patient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		1D4657DE1DCBA1C30051B373 /* Patient & Doctor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Patient & Doctor"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4657E11DCBA1C30051B373 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D4657E81DCBA2290051B373 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		1D4657E91DCBA2290051B373 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		1D4657EB1DCBA22F0051B373 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		1D4657EC1DCBA22F0051B373 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				1D4657E11DCBA1C30051B373 /* main.m */,
+				1D4657E81DCBA2290051B373 /* Doctor.h */,
+				1D4657E91DCBA2290051B373 /* Doctor.m */,
+				1D4657EB1DCBA22F0051B373 /* Patient.h */,
+				1D4657EC1DCBA22F0051B373 /* Patient.m */,
 			);
 			path = "Patient & Doctor";
 			sourceTree = "<group>";
@@ -118,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4657ED1DCBA22F0051B373 /* Patient.m in Sources */,
+				1D4657EA1DCBA2290051B373 /* Doctor.m in Sources */,
 				1D4657E21DCBA1C30051B373 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +251,7 @@
 				1D4657E71DCBA1C30051B373 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
