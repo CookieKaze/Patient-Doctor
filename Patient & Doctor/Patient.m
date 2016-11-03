@@ -27,6 +27,9 @@
     [doctor welcomesPatient:self];
 }
 
+-(void) requestMedicationFrom: (Doctor *)doctor withSymptom: (NSString *) symptom {
+    self.medication = [doctor prescribeMedication:self withSympton:symptom];
+}
 
 
 @end

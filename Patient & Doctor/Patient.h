@@ -20,8 +20,9 @@ enum gender{
 @property NSInteger * age;
 @property enum gender * gender;
 @property BOOL validHealthCard;
+@property NSString * medication;
 
 -(instancetype)initWithName: (NSString*) name andAge: (NSInteger) age andGender: (enum gender)gender andHealthCard: (BOOL) healthCard;
 -(void) visitDoctor: (Doctor *)doctor;
-
+-(void) requestMedicationFrom: (Doctor *)doctor withSymptom: (NSString *) symptom;
 @end

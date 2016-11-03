@@ -11,12 +11,17 @@
 
 @implementation Doctor
 
+
 -(instancetype)initWithName: (NSString*)name andSpecialization: (NSString*) specialiation {
     {
         self = [super init];
         if (self) {
             _name = name;
             _specialization = specialiation;
+            NSDictionary * medication = @{@"pain":@"Motrin",@"sleeplessness":@"Ambien", @"depressed":@"Celexa"};
+            _medicationList = medication;
+            NSMutableSet * acceptedPatients = [[NSMutableSet alloc]init];
+            _acceptedPatients = acceptedPatients;
         }
         return self;
     }
@@ -35,6 +40,31 @@
     }else {
         NSLog(@"You do not have a valid health card. Go away!");
     }
+}
+
+
+-(NSString *) checkSymptoms: (NSString *)symptom {
+    NSString * medication;
+    if ([self.medicationList objectForKey:symptom] != nil) {
+        medication = self.medicationList[symptom];
+    }else{
+        medication = @"Sorry, I don't know what to give you.";
+    }
+    return medication;
+}
+-(BOOL) checkAcceptedPatients: (Patient*) patient{
+    return [self.acceptedPatients containsObject:patient];
+}
+
+-(NSString *) prescribeMedication: (Patient *)patient withSympton:(NSString *)symptom {
+    NSString * medication = [self checkSymptoms:symptom];
+    if ([self checkAcceptedPatients:patient]) {
+        NSLog (@"Here is some %@.", medication);
+    }else{
+        NSLog(@"Sorry I can't give medication to patients not on my list.");
+        medication = nil;
+    }
+    return medication;
 }
 
 @end

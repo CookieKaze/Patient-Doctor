@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
         Patient * patient1 = [[Patient alloc]initWithName:@"Linda" andAge:18 andGender:female andHealthCard:NO];
         
         [patient1 visitDoctor:doctor1];
+        [patient1 requestMedicationFrom:doctor1 withSymptom:@"pain"];
     }
     return 0;
 }
